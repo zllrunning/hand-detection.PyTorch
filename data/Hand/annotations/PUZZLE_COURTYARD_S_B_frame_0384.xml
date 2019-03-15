@@ -1,0 +1,1 @@
+<annotation><folder>VOC2007</folder><filename>PUZZLE_COURTYARD_S_B_frame_0384.jpg</filename><size><width>1280</width><height>720</height><depth>3</depth></size><segmented>0</segmented><object><name>hand</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>283</xmin><ymin>2</ymin><xmax>457</xmax><ymax>123</ymax></bndbox></object></annotation>
