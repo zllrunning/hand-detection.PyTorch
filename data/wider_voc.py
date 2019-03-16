@@ -77,7 +77,7 @@ class VOCDetection(data.Dataset):
         self.root = root
         self.preproc = preproc
         self.target_transform = target_transform
-        self._annopath = os.path.join(self.root, 'annotations', '%s.xml')
+        self._annopath = os.path.join(self.root, 'Annotations', '%s.xml')
         self._imgpath = os.path.join(self.root, 'images', '%s.jpg')
         self.ids = list()
         with open(os.path.join(self.root, 'ImageSets/Main/trainval.txt'), 'r') as f:
