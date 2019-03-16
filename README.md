@@ -4,7 +4,7 @@ Hand detection in PyTorch
 ### Contents
 - [Installation](#installation)
 - [Training](#training)
-- [Evaluation](#evaluation)
+- [Demo](#Demo)
 - [References](#references)
 
 ## Installation
@@ -23,33 +23,31 @@ git clone https://github.com/zllrunning/hand-detection.PyTorch.git
 _Note: We currently only support PyTorch-0.4.0 and Python 3+._
 
 ## Training
-1. Download [EgoHands dataset](http://vision.soic.indiana.edu/projects/egohands/) dataset, place the images under this directory:
-  ```Shell
-  $HandBoxes_ROOT/data/Hand/images
-  ```
+
+1. Prepare training data:
+```Shell
+cd $HandBoxes_ROOT/
+prepare_data.sh
+```
 
 2. Train the model using EgoHands dataset:
-  ```Shell
-  cd $HandBoxes_ROOT/
-  python3 train.py
-  ```
+```Shell
+python3 train.py
+```
 
-If you do not wish to train the model, you can download [our pre-trained model](https://drive.google.com/open?id=128m1QasIwQRkrY-Eb5Epi-ShXnrZWUCQ) and save it in `$HandBoxes_ROOT/weights`.
+If you do not wish to train the model, you can download [our pre-trained model](https://drive.google.com/open?id=1eFSwZoSfVVroAy7LiGYybW6F8ErshoZW) and save it in `$HandBoxes_ROOT/weights`.
 
 
-## Evaluation
+## Demo
 1. Evaluate the trained model using:
 ```Shell
 # evaluate using GPU
-python3 test.py
+python test.py --video data/video/hand.avi
 # evaluate using cpu
-python3 test.py --cpu
+python test.py --image data/video/CARDS_OFFICE_H_T_frame_1085.jpg --cpu
 ```
     
 ## References
-- [FaceBoxes.PyTorch](https://github.com/zisianw/FaceBoxes.PyTorch)
-- [Official release (Caffe)](https://github.com/sfzhang15/FaceBoxes)
-- A huge thank you to SSD ports in PyTorch that have been helpful:
-  * [ssd.pytorch](https://github.com/amdegroot/ssd.pytorch), [RFBNet](https://github.com/ruinmessi/RFBNet)
-
-  _Note: If you can not download the converted annotations, the provided images and the trained model through the above links, you can download them through [BaiduYun](https://pan.baidu.com/s/1HoW3wbldnbmgW2PS4i4Irw)._
+This project is based on [FaceBoxes.PyTorch](https://github.com/zisianw/FaceBoxes.PyTorch)
+- [handtracking](https://github.com/victordibia/handtracking)
+- [od-annotation](https://github.com/hzylmf/od-annotation)
