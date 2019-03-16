@@ -108,5 +108,5 @@ venv.bak/
 .idea
 
 # data 
-data/Hand/images/*
+data/Hand/
 weights/

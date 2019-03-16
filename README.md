@@ -25,6 +25,9 @@ _Note: We currently only support PyTorch-0.4.0 and Python 3+._
 ## Training
 
 1. Prepare training data:
+	-- download EgoHands dataset
+	-- generate bounding boxes and visualize them to ensure correctness
+	-- convert bbox file to VOC format
 ```Shell
 cd $HandBoxes_ROOT/
 prepare_data.sh
