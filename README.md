@@ -30,7 +30,7 @@ _Note: We currently only support PyTorch-0.4.0 and Python 3+._
 	-- convert bbox file to VOC format
 ```Shell
 cd $HandBoxes_ROOT/
-prepare_data.sh
+sh prepare_data.sh
 ```
 
 2. Train the model using EgoHands dataset:
