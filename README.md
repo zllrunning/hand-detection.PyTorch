@@ -1,6 +1,12 @@
 # hand-detection.PyTorch
 Hand detection in PyTorch
 
+<p align="center">
+	<a href="https://github.com/zllrunning/hand-detection.PyTorch">
+    <img class="page-image" src="https://github.com/zllrunning/hand-detection.PyTorch/blob/master/data/video/saveVideo.gif" >
+	</a>
+</p>
+
 ### Contents
 - [Installation](#installation)
 - [Training](#training)
