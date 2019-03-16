@@ -80,7 +80,7 @@ class VOCDetection(data.Dataset):
         self._annopath = os.path.join(self.root, 'annotations', '%s.xml')
         self._imgpath = os.path.join(self.root, 'images', '%s.jpg')
         self.ids = list()
-        with open(os.path.join(self.root, 'img_list.txt'), 'r') as f:
+        with open(os.path.join(self.root, 'ImageSets/Main/trainval.txt'), 'r') as f:
           self.ids = [tuple(line.split()) for line in f]
 
     def __getitem__(self, index):
