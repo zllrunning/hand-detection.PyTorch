@@ -15,7 +15,7 @@ import csv
 
 
 def save_csv(csv_path, csv_content):
-    with open(csv_path, 'w') as csvfile:
+    with open(csv_path, 'w', encoding='utf-8') as csvfile:
         wr = csv.writer(csvfile)
         for i in range(len(csv_content)):
             wr.writerow(csv_content[i])
@@ -125,7 +125,7 @@ def generate_label_files(image_dir):
                 if(f.split(".")[1] == "csv"):
                     loop_index += 1
                     #print(loop_index, f)
-                    csv_file = open(image_dir + dir + "/" + f, 'r')
+                    csv_file = open(image_dir + dir + "/" + f, 'r', encoding='utf-8')
                     reader = csv.reader(csv_file)
                     for row in reader:
                         csvholder.append(row)
